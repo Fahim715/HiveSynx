@@ -37,16 +37,19 @@ import {
 } from '@clerk/nextjs'
 import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
+import {ThemeProvider} from "@/components/providers/theme-provider";
+import { cn } from '@/lib/utils';
 
-const geistSans = Geist({
+
+const font = Geist({
   variable: '--font-geist-sans',
   subsets: ['latin'],
 })
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
-})
+// const geistMono = Geist_Mono({
+//   variable: '--font-geist-mono',
+//   subsets: ['latin'],
+// })
 
 export const metadata: Metadata = {
   title: 'Clerk Next.js Quickstart',
@@ -60,8 +63,14 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
-      <html lang="en">
-        <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <html lang="en" suppressHydrationWarning>
+        <body className={cn(font.className, "bg-[#f4f1de] dark:bg-[#232323]")}>
+          <ThemeProvider 
+            attribute="class"
+            defaultTheme="dark"
+            enableSystem={false}
+            storageKey="hivesynx-theme"
+          >
           <header className="flex justify-end items-center p-4 gap-4 h-16">
             <SignedOut>
               <SignInButton />
@@ -72,6 +81,7 @@ export default function RootLayout({
             </SignedIn>
           </header>
           {children}
+          </ThemeProvider>
         </body>
       </html>
     </ClerkProvider>
