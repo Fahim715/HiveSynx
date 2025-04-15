@@ -1,8 +1,6 @@
-import {Button} from "@/components/ui/button";
-import {ModeToggle} from "@/components/mode-toggle";
+
 import { ChatBubbleLeftRightIcon, UserGroupIcon, ClockIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
-const state = true;
 
 export default function Home() {
   return (
@@ -19,13 +17,13 @@ export default function Home() {
       </div>
       <div className="md:w-1/2 space-y-6 text-center md:text-left">
         <h1 className="text-5xl font-bold text-gray-900 dark:text-gray-100">
-          Sync Your Team's 
+          Sync Your Team&apos;s 
           <span className="text-indigo-600 dark:text-indigo-400"> Productivity</span>
         </h1>
         <p className="text-xl text-gray-600 dark:text-gray-100">
               HiveSync brings your team together in a modern workspace designed for seamless communication, file sharing, and project management.
         </p>
-        <Link href="/signup">
+        <Link href="/sign-up">
           <button className="bg-indigo-600 text-white px-8 py-3 rounded-lg hover:bg-indigo-700 transition-colors active:scale-95 transform transition-transform duration-150">
             Get Started
           </button>
@@ -59,7 +57,7 @@ export default function Home() {
           Secure & Scalable Infrastructure
         </h3>
         <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-        Built with enterprise-grade security and reliability, HiveSync ensures your data stays protected while scaling with your team's needs.
+        Built with enterprise-grade security and reliability, HiveSync ensures your data stays protected while scaling with your team&apos;s needs.
         </p>
       </div>
     </div>

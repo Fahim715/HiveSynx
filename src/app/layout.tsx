@@ -3,17 +3,11 @@
 import { type Metadata } from 'next'
 import {
   ClerkProvider,
-  SignInButton,
-  SignUpButton,
-  SignedIn,
-  SignedOut,
-  UserButton,
 } from '@clerk/nextjs'
-import { Geist, Geist_Mono } from 'next/font/google'
+import { Geist } from 'next/font/google'
 import './globals.css'
 import {ThemeProvider} from "@/components/providers/theme-provider";
 import { cn } from '@/lib/utils';
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { Header } from '@/components/ui/header';
 import { Footer } from '@/components/ui/footer';
 
