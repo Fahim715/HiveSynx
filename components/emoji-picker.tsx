@@ -30,7 +30,7 @@ export const MessageEmojiPicker = ({ onChange }: EmojiPickerProps) => {
         <EmojiPicker
           width={300}
           height={350}
-          theme={resolvedTheme === "dark" ? "dark" : "light"}
+          // theme={resolvedTheme === "dark" ? "dark" : "light"}
           onEmojiClick={(emojiData) => onChange(emojiData.emoji)}
           lazyLoadEmojis={true}
           previewConfig={{ showPreview: false }}

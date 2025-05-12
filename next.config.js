@@ -13,7 +13,8 @@ const nextConfig = {
       "uploadthing.com",
       "utfs.io"
     ]
-  }
+  },
+  productionBrowserSourceMaps: false,
 }
 
 module.exports = nextConfig
